@@ -12,6 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 
+import com.daimajia.slider.library.Animations.DescriptionAnimation;
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.demo.materialdesign.R;
 import com.demo.materialdesign.activities.DetailActivity;
 import com.demo.materialdesign.bean.FoodProBean;
@@ -34,9 +39,10 @@ import org.json.JSONObject;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
-public class FirstFragment extends Fragment implements UIDataListener<String>, SwipeRefreshLayout.OnRefreshListener {
+public class FirstFragment extends Fragment implements UIDataListener<String>, SwipeRefreshLayout.OnRefreshListener,ViewPagerEx.OnPageChangeListener {
 
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -52,6 +58,7 @@ public class FirstFragment extends Fragment implements UIDataListener<String>, S
     private ArrayList<FoodProBean> myFoodBeans;
     private boolean isRefresh = false;
     private int positon;
+    private SliderLayout mDemoSlider;
 
     public static FirstFragment newInstance(String param1, String param2) {
         FirstFragment fragment = new FirstFragment();
@@ -109,16 +116,58 @@ public class FirstFragment extends Fragment implements UIDataListener<String>, S
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                int po = position%10;
-                positon =position;
+                int po = position % 10;
+                positon = position;
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("foodBean", myFoodBeans.get(po));
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
-                intent.putExtra("bundle",bundle);
+                intent.putExtra("bundle", bundle);
                 startActivity(intent);
             }
         });
+        
+        /*轮播界面*/
+        View top_view =inflater.inflate(R.layout.top_view, null);
+        top_view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        mDemoSlider = (SliderLayout)top_view.findViewById(R.id.slider);
+        HashMap<String,String> url_maps = new HashMap<String, String>();
+        url_maps.put("haha", "http://rootwork.co/wp-content/uploads/2013/07/Website-Android-Development-Banner.jpg");
+        url_maps.put("hehe", "http://22iiaa2jpzc63c93rf3p9oti14j8.wpengine.netdna-cdn.com/wp-content/uploads/komoot-banner-640x290.png");
+        url_maps.put("enen", "http://www.aromasoftech.com/images/ca-banner.jpg");
+        url_maps.put("yiyi", "https://rezaaugustian.files.wordpress.com/2014/10/wpid-daftar-smartphone-yang-akan-mendapatkan-update-android-lollipop-banner.jpeg");
+ 
+        
+        HashMap<String,Integer> file_maps = new HashMap<String, Integer>();
+        file_maps.put("Hannibal", R.drawable.bigbang);
+        file_maps.put("Big Bang Theory", R.drawable.bigbang);
+        file_maps.put("House of Cards", R.drawable.house);
+        file_maps.put("Game of Thrones", R.drawable.game_of_thrones);
 
+        for(String name : url_maps.keySet()){
+            TextSliderView textSliderView = new TextSliderView(getActivity());
+            // initialize a SliderLayout
+            textSliderView
+                    .description(name)
+                            // .image(file_maps.get(name))
+                    .image(url_maps.get(name))
+                    .setScaleType(BaseSliderView.ScaleType.Fit);
+                    //.setOnSliderClickListener(this);
+
+            //add your extra information
+            textSliderView.bundle(new Bundle());
+            textSliderView.getBundle()
+                    .putString("extra",name);
+
+            mDemoSlider.addSlider(textSliderView);
+        }
+
+        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Default);
+        mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Right_Bottom);
+        mDemoSlider.setCustomAnimation(new DescriptionAnimation());
+        mDemoSlider.setDuration(4000);
+        mDemoSlider.addOnPageChangeListener(this);
+        mListView.addHeaderView(top_view);
+        
         networkHelper = new GetJsonResultNetWorkHelper(getActivity());
         networkHelper.setUiDataListener(this);
         initData();
@@ -152,6 +201,12 @@ public class FirstFragment extends Fragment implements UIDataListener<String>, S
     @Override
     public void onDetach() {
         super.onDetach();
+    }
+
+    @Override
+    public void onStop() {
+        mDemoSlider.stopAutoCycle();
+        super.onStop();
     }
 
     @Override
@@ -196,5 +251,20 @@ public class FirstFragment extends Fragment implements UIDataListener<String>, S
                 loadData();
             }
         }, 2000);
+    }
+
+    @Override
+    public void onPageScrolled(int i, float v, int i1) {
+        
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+        Log.d("Slider Demo", "Page Changed: " + position);
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int i) {
+
     }
 }
