@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="edit_info_item">
+
+        <item>食品生产企业数据调查申报</item>
+        <item>食品流通经营主体调查申报</item>
+        <item>食品(食用农产品)市场开办者调查申报</item>
+        <item>餐饮服务单位调查申报</item>
+        <item>保健食品经营单位调查申报</item>
+        <item>未取证的小作坊、小食品店、小餐饮店调查申报</item>
+        
+    </string-array>
+
+    <string-array name="type_item">
+
+        <item>食品生产企业</item>
+        <item>食品流通经营主体</item>
+        <item>食品市场开办者</item>
+        <item>餐饮服务单位</item>
+        <item>保健食品经营单位</item>
+        <item>未取证的小作坊、小食品店等</item>
+
+    </string-array>
+
+    <string-array name="food_type_info">
+
+        <item>粮食加工品</item>
+        <item>食用油、油脂及其制品</item>
+        <item>调味品</item>
+        <item>肉质品</item>
+        <item>乳质品</item>
+        <item>饮料</item>
+        <item>方便食品</item>
+        <item>饼干</item>
+        <item>罐头</item>
+        <item>冷冻饮品</item>
+        <item>速冻食品</item>
+        <item>其他</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/background_material_light"
+              tools:context="com.demo.materialdesign.activities.EditInfoDetailActivity">
+
+    <include layout="@layout/toolbar"
+        />
+
+    <FrameLayout
+        android:id="@+id/fragment_edit_info"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+
+</LinearLayout>
+

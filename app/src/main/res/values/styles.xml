@@ -1,0 +1,174 @@
+<resources>
+
+    <!-- ScrimInsetLayout -->
+    <style name="ScrimInsetsLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="insetForeground">@color/nav_drawer_inset_foreground</item>
+    </style>
+
+
+    <!-- Material Design Navigation Drawer -->
+    <style name="NavDrawerRowLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/nav_drawer_item_row_height</item>
+        <item name="android:background">@drawable/nav_drawer_row_item_background</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="NavDrawerRowLayout.Main">
+        <item name="android:tag">@string/tag_nav_drawer_main_entry</item>
+    </style>
+
+    <style name="NavDrawerRowLayout.Secondary">
+        <item name="android:tag">@string/tag_nav_drawer_special_entry</item>
+    </style>
+
+    <style name="NavDrawerRowItemIcon">
+        <item name="android:layout_width">@dimen/nav_drawer_item_row_icon_size</item>
+        <item name="android:layout_height">@dimen/nav_drawer_item_row_icon_size</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/nav_drawer_vertical_keyline_icon_left</item>
+        <item name="colorStateList">@color/nav_drawer_row_icon</item>
+    </style>
+
+    <style name="NavDrawerRowItemText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/nav_drawer_item_main_text</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/nav_drawer_vertical_keyline_text_left</item>
+    </style>
+
+    <style name="NavDrawerSectionSubheaderText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/nav_drawer_subheader_height</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/nav_drawer_section_subheader</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/nav_drawer_vertical_keyline_icon_left</item>
+    </style>
+
+    <style name="NavDrawerAccountInfoText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--editText的样式-->
+    <style name="ContactEditText" parent="DateEditText">
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+    <!--TextView的样式-->
+    <style name="ContactTextView" parent="DateEditText">
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/gray_de</item>
+    </style>
+
+    <style name="DateEditText" parent="Material.Widget.EditText.Light">
+        <item name="cet_spanHeight">32dp</item>
+        <item name="cet_spanMaxWidth">150dp</item>
+        <item name="cet_spanPaddingLeft">8dp</item>
+        <item name="cet_spanPaddingRight">12dp</item>
+        <item name="cet_spanTextSize">14sp</item>
+        <item name="cet_spanTextColor">#000000</item>
+        <item name="cet_spanBackgroundColor">#FFE0E0E0</item>
+        <item name="cet_spanSpacing">4dp</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Body1</item>
+    </style>
+
+    <!--button的样式-->
+    <style name="RaiseWaveButtonRippleStyle" parent="Material.Drawable.Ripple.Wave.Light">
+        <item name="android:background">@drawable/bg_bt_raise</item>
+        <item name="rd_leftPadding">1dp</item>
+        <item name="rd_topPadding">1dp</item>
+        <item name="rd_rightPadding">1dp</item>
+        <item name="rd_bottomPadding">2dp</item>
+    </style>
+
+    <style name="RaiseWaveColorButtonRippleStyle" parent="Material.Drawable.Ripple.Wave.Light">
+        <item name="android:background">@drawable/bg_bt_raise_color</item>
+        <item name="rd_rippleColor">#33000000</item>
+        <item name="rd_leftPadding">1dp</item>
+        <item name="rd_topPadding">1dp</item>
+        <item name="rd_rightPadding">1dp</item>
+        <item name="rd_bottomPadding">2dp</item>
+    </style>
+
+    <style name="FlatWaveButtonRippleStyle" parent="Material.Drawable.Ripple.Wave.Light">
+        <item name="android:background">@null</item>
+        <item name="rd_cornerRadius">4dp</item>
+    </style>
+
+    <!--     MenuItemRippleStyle   -->
+    <style name="MenuItemRippleStyle" parent="Material.Drawable.Ripple.Wave">
+        <item name="rd_rippleColor">#902DA0FF</item>
+        <item name="rd_rippleAnimDuration">300</item>
+        <item name="rd_maskType">rectangle</item>
+        <item name="rd_cornerRadius">0dp</item>
+    </style>
+
+    <!-- ContactView -->
+    <style name="ContactView">
+        <item name="android:minHeight">56dp</item>
+        <item name="cv_buttonSize">0dp</item>
+        <item name="cv_avatarSize">40dp</item>
+        <item name="cv_spacing">8dp</item>
+        <item name="cv_nameTextAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="cv_nameTextColor">@color/abc_primary_text_material_light</item>
+        <item name="cv_addressTextAppearance">@style/TextAppearance.AppCompat.Body1</item>
+        <item name="cv_addressTextColor">@color/abc_primary_text_material_light</item>
+    </style>
+
+    <style name="ReplacementContactView" parent="Material.Drawable.Ripple.Wave.Light">
+        <item name="rd_cornerRadius">0dp</item>
+        <item name="rd_delayClick">none</item>
+
+        <item name="android:minHeight">56dp</item>
+        <item name="cv_buttonSize">0dp</item>
+        <item name="cv_avatarSize">40dp</item>
+        <item name="cv_spacing">8dp</item>
+        <item name="cv_nameTextAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="cv_nameTextColor">@color/abc_primary_text_material_light</item>
+        <item name="cv_addressTextAppearance">@style/TextAppearance.AppCompat.Body1</item>
+        <item name="cv_addressTextColor">@color/abc_primary_text_material_light</item>
+    </style>
+
+    <style name="SelectedContactView" parent="Material.Drawable.Ripple.Wave.Light">
+        <item name="android:background">#FF00B8D4</item>
+        <item name="rd_cornerRadius">0dp</item>
+        <item name="rd_delayClick">none</item>
+
+        <item name="android:minHeight">72dp</item>
+        <item name="cv_buttonSize">48dp</item>
+        <item name="cv_nameTextColor">#FFFFFFFF</item>
+        <item name="cv_addressTextColor">#FFFFFFFF</item>
+        <item name="cv_avatarSize">40dp</item>
+        <item name="cv_spacing">8dp</item>
+        <item name="cv_nameTextAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="cv_addressTextAppearance">@style/TextAppearance.AppCompat.Body1</item>
+    </style>
+
+    <style name="drop_down_list_footer_progress_bar_style">
+        <item name="android:minHeight">36dp</item>
+        <item name="android:maxHeight">36dp</item>
+    </style>
+
+    <style name="drop_down_list_footer_font_style">
+        <item name="android:textColor">#A2A3A2</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+
+</resources>

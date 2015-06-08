@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- App Main Palette -->
+    <color name="primary">@color/green_500</color>
+    <color name="primaryDark">@color/green_700</color>
+    <color name="textPrimary">@color/text_white_text_icons_100</color>
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+
+    <!-- Text -->
+    <color name="text_black_100">#000000</color>
+    <color name="text_black_text_87">#DE000000</color>
+    <color name="text_black_secondary_icon_54">#8A000000</color>
+    <color name="text_black_disable_hint_26">#42000000</color>
+    <color name="text_black_divider_12">#1F000000</color>
+
+    <color name="text_white_text_icons_100">#FFFFFF</color>
+    <color name="text_white_secondary_70">#B3FFFFFF</color>
+    <color name="text_white_disabled_hint_30">#4DFFFFFF</color>
+    <color name="text_white_divider_12">#1FFFFFFF</color>
+
+    <!-- NavigationDrawer -->
+    <color name="navigation_drawer_background">#ffffffff</color>
+    <color name="nav_drawer_item_icon_normal">@color/grey_600</color>
+    <color name="nav_drawer_item_icon_selected">@color/green_500</color>
+    <color name="nav_drawer_item_text_selected">@color/green_500</color>
+    <color name="nav_drawer_section_subheader">@color/text_black_secondary_icon_54</color>
+    <color name="nav_drawer_inset_foreground">#4000</color>
+
+    <color name="nav_drawer_row_item_unselected">@color/white</color>
+    <color name="nav_drawer_row_item_selected">@color/grey_200</color>
+    <color name="nav_drawer_row_item_pressed">@color/grey_400</color>
+
+    <!-- Green -->
+    <color name="green_500">#4caf50</color>
+
+    <color name="green_700">#388e3c</color>
+
+    <!-- Grey -->
+    <color name="grey_200">#eeeeee</color>
+    <color name="grey_400">#bdbdbd</color>
+    <color name="grey_600">#757575</color>
+
+    <!-- Blue -->
+    <color name="blue_500">#2196f3</color>
+
+    <!-- Amber -->
+    <color name="amber_500">#ffc107</color>
+
+    <!-- Black and White -->
+    <color name="white">#FFFFFF</color>
+    <color name="black_alpha_50">#80000000</color>
+
+
+    <color name="gray_de">#666666</color>
+    <color name="list_item_press">#216b74ff</color>
+
+    <color name="theme_primary">#4387F0</color>
+    <color name="theme_primary_dark">#ff2b4d90</color>
+
+
+    <color name="colorPrimary">#FF03A9F4</color>
+    <color name="colorPrimaryDark">#ff0171c9</color>
+    <color name="colorAccent">#18b000</color>
+    <color name="colorControlNormal">#FF78909C</color>
+    <color name="colorControlActivated">#FF03A9F4</color>
+    <color name="colorSwitchThumbNormal">#FF78909C</color>
+
+    <array name="progress_colors">
+        <item>#FF3F8AF8</item>
+        <item>#FFD8433C</item>
+        <item>#FFF2AF3A</item>
+        <item>#FF279B5E</item>
+    </array>
+
+    <array name="in_colors">
+        <item>#FFB5D4FF</item>
+        <item>#FFDEEAFC</item>
+        <item>#FFFAFFFE</item>
+    </array>
+
+    <color name="rb_checked">#FF4CAF50</color>
+    <color name="rb_unchecked">#FF6D6D6D</color>
+    <color name="rb_disable">#FFB0B0B0</color>
+
+    <color name="tpi_checked">#FFFFFFFF</color>
+    <color name="tpi_unchecked">#99FFFFFF</color>
+
+    <color name="et_divider_focused">@color/colorControlActivated</color>
+    <color name="et_divider_not_focused">#FF6D6D6D</color>
+    <color name="et_divider_disable">#FFC1C1C1</color>
+
+
+    <color name="default_footer_bg">#07000000</color>
+    <color name="default_listView_bg">#02000000</color>
+    <color name="default_splash_bg">#02000000</color>
+
+</resources>

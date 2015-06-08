@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/drag_content_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.demo.materialdesign.customViews.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        app:pstsShouldExpand="false"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        />
+    <com.demo.materialdesign.customViews.MyViewPager
+        android:id="@+id/pager"
+        android:background="@color/background_material_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.demo.materialdesign.customViews.MyViewPager>
+</LinearLayout>

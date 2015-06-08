@@ -1,0 +1,49 @@
+<resources>
+    <!-- General -->
+    <string name="app_name">四川省食品统计系统</string>
+
+    <!-- Toolbar titles -->
+    <string name="toolbar_title_home">数据查询分析</string>
+    <string name="toolbar_title_explore">数据申报</string>
+    <string name="other_activity">Other Activity</string>
+    <string name="detail_activity">详细信息</string>
+
+    <!-- Navigation Drawer -->
+    <string name="nav_drawer_item_home">数据查询分析</string>
+    <string name="nav_drawer_item_explore">数据申报</string>
+    <string name="nav_drawer_help_and_feedback">其他</string>
+    <string name="nav_drawer_about">设置</string>
+    <string name="navigation_drawer_opened">The navigation drawer is opened</string>
+    <string name="navigation_drawer_closed">The navigation drawer is closed</string>
+    <string name="tag_nav_drawer_main_entry">nav_drawer_main_entry</string>
+    <string name="tag_nav_drawer_special_entry">nav_drawer_special_entry</string>
+    <string name="tools_text_account_information_username">张三</string>
+    <string name="tools_text_account_information_email">四川省食品生产经营主体调查统计系统</string>
+
+    <!-- Typeface names -->
+    <string name="typeface_roboto_regular">Roboto-Regular</string>
+    <string name="typeface_roboto_medium">Roboto-Medium</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="notify_priority">notify_priority</string>
+    <string name="title_activity_setting">设置</string>
+    <string name="xiaomi_attention">
+        <![CDATA[]]></string>
+    <string name="toast_close">当前为关闭。\n开启后会在你使用其他 APP
+        的时，定时弹出可爱的小『吐司』
+    </string>
+    <string name="toast_open">当前为开启。\n开启后会在你使用其他 APP
+        的时，定时弹出可爱的小『吐司』
+    </string>
+    <string name="title_activity_edit_info_detail">请填写详细信息</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="drop_down_list_header_loading_text">加载中&#8230;</string>
+    <string name="drop_down_list_footer_default_text">点击加载更多</string>
+    <string name="drop_down_list_footer_loading_text">加载中&#8230;</string>
+    <string name="drop_down_list_footer_no_more_text">无更多信息</string>
+    <string name="image_content">Image</string>
+    <string name="httpError">连接失败,请稍候再试</string>
+
+</resources>

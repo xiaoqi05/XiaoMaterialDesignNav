@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:swipe="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/background_material_light"
+             android:paddingTop="6dp"
+             android:paddingRight="12dp"
+             android:paddingLeft="12dp"
+             android:id="@+id/fl_list_content"
+             >
+    <com.demo.materialdesign.customViews.swipelistview.SwipeListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:dividerHeight="4dp"
+        android:divider="#00ffffff"
+        android:footerDividersEnabled="false"
+        android:scrollbarSize="2dp"
+        swipe:swipeFrontView="@+id/front"
+        swipe:swipeBackView="@+id/back"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeMode="none"
+        swipe:swipeIsDropDownStyle="false"
+        swipe:swipeIsOnBottomStyle="false"
+        swipe:swipeIsAutoLoadOnBottom="true"/>
+
+</FrameLayout>

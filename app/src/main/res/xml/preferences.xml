@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+    android:layout="@layout/preference_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/title_activity_setting">
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="人性化自由选择">
+        <Preference
+            android:layout="@layout/preference_item"
+            android:title="哈哈">
+        </Preference>
+        <CheckBoxPreference
+            android:title="在通知栏中显示"
+            android:summaryOff="当前已关闭"
+            android:summaryOn="当前已开启"
+            android:defaultValue="true"
+            android:widgetLayout="@layout/l_switch"
+            />
+        <CheckBoxPreference
+            android:layout="@layout/preference_item"
+            android:title="通知栏消息字体颜色"
+            android:summaryOff="当前为黑色"
+            android:summaryOn="当前为白色"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:layout="@layout/preference_item"
+            android:title="开机自启动"
+            android:summaryOff="当前已开启"
+            android:summaryOn="当前已关闭"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:title="开机自启动"
+            android:summaryOff="当前已关闭"
+            android:summaryOn="当前已开启"
+            android:defaultValue="true"
+            android:widgetLayout="@layout/l_switch"
+            />
+        <EditTextPreference
+            android:layout="@layout/preference_item"
+            android:title="点击输入姓名"
+            android:dialogTitle="输入姓名"
+            android:key="editName"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="帮助">
+        <Preference
+            android:layout="@layout/preference_item"
+            android:title="关于">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://218.89.222.118:8085/sg_rcjg/"/>
+        </Preference>
+
+        <Preference
+            android:layout="@layout/preference_item"
+            android:title="手动检查更新">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://218.89.222.118:8085/sg_rcjg/"/>
+        </Preference>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="感谢有你">
+
+        <Preference
+            android:layout="@layout/preference_item"
+            android:title="退出登录"/>
+    </PreferenceCategory>
+</PreferenceScreen>
